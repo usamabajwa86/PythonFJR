@@ -2,17 +2,6 @@ import streamlit as st
 import pdf2docx
 from io import BytesIO
 import tempfile
-from pdf2docx import Converter
-
-def convert_pdf_to_word(pdf_file_path, docx_file_path):
-    # Create a PDF converter
-    cv = Converter(pdf_file_path)
-
-    # Convert PDF to Word
-    cv.convert(docx_file_path, start=0, end=None)
-
-    # Close the converter
-    cv.close()
 
 # Set page title
 st.set_page_config(page_title="PDF to Word Converter")
